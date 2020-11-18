@@ -1,0 +1,55 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "leftBody rightBody";
+  column-gap: 4vw;
+  padding: 1vw;
+}
+
+.leftBody {
+  grid-area: leftBody;
+  border: 1px solid rgb(200, 200, 200);
+  width: 100%;
+  height: auto;
+  padding: 1vw;
+}
+.textHeadLeft {
+  font-size: 2vmin;
+  font-weight: 1000;
+  padding: 10px;
+}
+
+.textHeadLeft2 {
+  font-size: 2vmin;
+  font-weight: 1000;
+  padding: 7px;
+  margin-top: 20px;
+}
+.rightBody {
+  grid-area: rightBody;
+  border: none;
+  width: 100%;
+  height: auto;
+}
+
+.ordinaryText {
+  font-size: 1.7vmin;
+  color: rgb(78, 78, 78);
+}
+
+input[type="radio"] {
+  transform: scale(0.75);
+}
+
+@media (max-width: 800px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "rightBody";
+    padding: 1vw;
+  }
+
+  .leftBody {
+    display: none;
+  }
+}

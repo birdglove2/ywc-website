@@ -1,0 +1,207 @@
+/* .rowMerchant {
+  grid-auto-columns: 1fr 3fr;
+} */
+
+.merchantBox {
+  width: auto;
+  height: 30vh;
+  /*background-color: rgb(181, 211, 141);*/
+  border: 1px solid rgb(210, 230, 240);
+  margin-bottom: 5px;
+  padding: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.openCloseSticker {
+  margin-top: 1vh;
+}
+
+.isOpenSticker {
+  margin-left: 10px;
+  width: 3vw;
+  height: 2vh;
+  border-radius: 2px;
+  color: white;
+  background-color: rgb(43, 190, 6);
+  font-size: 9px;
+  font-weight: 700;
+  padding: 1px;
+  text-align: center;
+}
+
+.isCloseSticker {
+  margin-left: 10px;
+  width: 3vw;
+  height: 2vh;
+  border-radius: 2px;
+  color: white;
+  background-color: rgb(182, 179, 179);
+  font-size: 9px;
+  font-weight: 700;
+  padding: 1px;
+  text-align: center;
+}
+
+.secondTitleContainer {
+  font-size: 1.8vh;
+  margin-top: 0.5vh;
+  color: rgb(140, 140, 140);
+}
+
+.keedkeed {
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  font-size: 0.8vh;
+  color: rgb(200, 200, 200);
+}
+.merchantImg {
+  float: left;
+  width: 16.5vw;
+  height: 100%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centerClosedContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.merchantImgClosed {
+  float: left;
+  width: 16.5vw;
+  height: 100%;
+  opacity: 60%;
+}
+
+.NAimg {
+  position: absolute;
+  width: 5vw;
+  height: 10vh;
+  z-index: 10;
+}
+
+.merchantTextbox {
+  margin-left: 20px;
+  /* background-color: rgb(239, 239, 241);*/
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.iconImg {
+  margin-top: 0.3vw;
+  margin-left: 0.3vw;
+  width: 2vw;
+  height: 4vh;
+}
+
+.shopNameText {
+  margin-top: 5px;
+  font-size: 2.5vmin;
+  font-weight: 1000;
+}
+
+.additionalInfo {
+  font-size: 1.8vh;
+  margin-top: 2vh;
+  color: rgb(140, 140, 140);
+}
+
+.boldmenu {
+  color: rgb(94, 94, 94);
+}
+
+.facility {
+  margin-top: 1.7vh;
+}
+
+@media (max-width: 800px) {
+  body {
+  }
+
+  .merchantBox {
+    width: auto;
+    height: 70vh;
+    border: 1px solid rgb(210, 230, 240);
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .merchantImg {
+    width: auto;
+    height: 50%;
+  }
+
+  /* .merchantImgClosed {
+    width: auto;
+    height: 50%;
+    opacity: 60%;
+  } */
+
+  /* .NAimg {
+    position: absolute;
+    width: 5vw;
+    height: 10vh;
+    z-index: 10;
+  } */
+
+  .shopNameText {
+    margin-top: 3vh;
+    font-size: 5vmin;
+    font-weight: 1000;
+  }
+
+  .openCloseSticker {
+    margin-top: 3.5vh;
+  }
+
+  .isOpenSticker {
+    margin-left: 10px;
+    width: 7vw;
+    height: 2vh;
+    border-radius: 2px;
+    color: white;
+    background-color: rgb(43, 190, 6);
+    font-size: 9px;
+    font-weight: 700;
+    padding: 1px;
+    text-align: center;
+  }
+
+  .isCloseSticker {
+    margin-left: 10px;
+    width: 7vw;
+    height: 2vh;
+    border-radius: 2px;
+    color: white;
+    background-color: rgb(182, 179, 179);
+    font-size: 9px;
+    font-weight: 700;
+    padding: 1px;
+    text-align: center;
+  }
+
+  .iconImg {
+    margin-top: 0.3vw;
+    margin-left: 0.3vw;
+    width: 7vw;
+    height: 5vh;
+  }
+}
