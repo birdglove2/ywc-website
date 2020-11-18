@@ -73,7 +73,7 @@ function Merchant(props) {
   let imgInfo;
   if (isOpen === "N/A") {
     imgInfo = (
-      <div className="center">
+      <div className="imgClosedContainer">
         <img className="NAimg" src={naimg}></img>
         <img className="merchantImgClosed" src={coverImageId}></img>
       </div>
@@ -85,7 +85,6 @@ function Merchant(props) {
   return (
     <div className="merchantBox">
       {imgInfo}
-      {/* <img className="iconImg" src={car}></img> */}
       <div className="merchantTextbox">
         <div className="titleContainer">
           <div className="shopNameText">{shopNameTH} </div>
@@ -93,7 +92,7 @@ function Merchant(props) {
         </div>
 
         <div className="secondTitleContainer">
-          {subcategoryName} | {levelOfPrice}| {addressDistrictName}{" "}
+          {subcategoryName} | {levelOfPrice} | {addressDistrictName}{" "}
           {addressProvinceName}
         </div>
         <div className="keedkeed">

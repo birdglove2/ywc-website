@@ -99,6 +99,8 @@ function Body() {
     setPriceSelected(e.target.value);
   };
 
+  const moreoverhandler = e => {};
+
   let eachCate = categories.map(category => {
     return (
       <div>
@@ -198,7 +200,14 @@ function Body() {
         </div>
       </div>
 
-      <div className="rightBody">{merchantBody}</div>
+      <div className="rightBody">
+        {merchantBody}
+        <div className="moreoverdiv">
+          <button onClick={moreoverhandler} className="moreoverbutton">
+            ดูเพิ่มเติม
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

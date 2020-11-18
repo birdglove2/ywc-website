@@ -1,5 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+
+body {
+  font-family: "Kanit", sans-serif;
+}
+
 .grid {
   display: grid;
+  min-width: 480px;
   grid-template-columns: 1fr 3fr;
   grid-template-areas: "leftBody rightBody";
   column-gap: 4vw;
@@ -9,6 +16,7 @@
 .leftBody {
   grid-area: leftBody;
   border: 1px solid rgb(200, 200, 200);
+  background-color: rgb(255, 255, 255);
   width: 100%;
   height: auto;
   padding: 1vw;
@@ -30,6 +38,9 @@
   border: none;
   width: 100%;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .ordinaryText {
@@ -41,15 +52,59 @@ input[type="radio"] {
   transform: scale(0.75);
 }
 
-@media (max-width: 800px) {
-  .grid {
+.moreoverdiv {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.moreoverbutton {
+  text-align: center;
+  width: 350px;
+  height: 40px;
+  color: rgb(78, 78, 78);
+  background: white;
+  border: 1px solid rgb(184, 183, 183);
+  border-width: 0.1px;
+  border-radius: 2px;
+  font-family: "Kanit", sans-serif;
+}
+
+@media (max-width: 480px) {
+  /* .grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "rightBody";
+    column-gap: 0vw;
     padding: 1vw;
+  } */
+  /* .grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  } */
+
+  .grid {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .leftBody {
     display: none;
+  }
+
+  .rightBody {
+    grid-area: rightBody;
+    border: none;
+    min-width: 480px;
+    height: auto;
+    padding: 10px;
   }
 }

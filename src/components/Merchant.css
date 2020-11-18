@@ -5,7 +5,7 @@
 .merchantBox {
   width: auto;
   height: 30vh;
-  /*background-color: rgb(181, 211, 141);*/
+  background-color: rgb(255, 255, 255);
   border: 1px solid rgb(210, 230, 240);
   margin-bottom: 5px;
   padding: 4px;
@@ -36,6 +36,9 @@
   font-weight: 700;
   padding: 1px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .isCloseSticker {
@@ -49,6 +52,9 @@
   font-weight: 700;
   padding: 1px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .secondTitleContainer {
@@ -67,15 +73,10 @@
   float: left;
   width: 16.5vw;
   height: 100%;
+  border-radius: 4px;
 }
 
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.centerClosedContainer {
+.imgClosedContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,6 +86,7 @@
   float: left;
   width: 16.5vw;
   height: 100%;
+  border-radius: 4px;
   opacity: 60%;
 }
 
@@ -130,14 +132,16 @@
   margin-top: 1.7vh;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 480px) {
   body {
+    /* background-color: black; */
   }
 
   .merchantBox {
     width: auto;
-    height: 70vh;
+    height: auto;
     border: 1px solid rgb(210, 230, 240);
+    padding: 0px;
     margin-bottom: 5px;
     display: flex;
     flex-direction: column;
@@ -145,22 +149,25 @@
   }
 
   .merchantImg {
-    width: auto;
-    height: 50%;
+    width: 100%;
+    margin-top: 0px;
+    height: 40vh;
+    border-radius: 4px;
   }
 
-  /* .merchantImgClosed {
-    width: auto;
-    height: 50%;
+  .merchantImgClosed {
+    min-width: 100%;
+    height: 35vh;
+    border-radius: 4px;
     opacity: 60%;
-  } */
+  }
 
-  /* .NAimg {
+  .NAimg {
     position: absolute;
-    width: 5vw;
-    height: 10vh;
+    width: 22vw;
+    height: 13vh;
     z-index: 10;
-  } */
+  }
 
   .shopNameText {
     margin-top: 3vh;
@@ -173,9 +180,9 @@
   }
 
   .isOpenSticker {
-    margin-left: 10px;
+    margin-left: 2vw;
     width: 7vw;
-    height: 2vh;
+    height: 1.5vh;
     border-radius: 2px;
     color: white;
     background-color: rgb(43, 190, 6);
@@ -183,12 +190,15 @@
     font-weight: 700;
     padding: 1px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .isCloseSticker {
-    margin-left: 10px;
+    margin-left: 2vw;
     width: 7vw;
-    height: 2vh;
+    height: 1.5vh;
     border-radius: 2px;
     color: white;
     background-color: rgb(182, 179, 179);
@@ -196,12 +206,35 @@
     font-weight: 700;
     padding: 1px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .iconImg {
     margin-top: 0.3vw;
     margin-left: 0.3vw;
-    width: 7vw;
-    height: 5vh;
+    margin-bottom: 4vw;
+    width: 8vw;
+    height: 3.5vh;
+  }
+
+  .keedkeed {
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    font-size: 0.4vh;
+    color: rgb(200, 200, 200);
+  }
+
+  .secondTitleContainer {
+    font-size: 1.2vh;
+    margin-top: 0.5vh;
+    color: rgb(140, 140, 140);
+  }
+
+  .additionalInfo {
+    font-size: 1.2vh;
+    margin-top: 2vh;
+    color: rgb(140, 140, 140);
   }
 }

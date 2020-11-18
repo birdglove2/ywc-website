@@ -2,4 +2,13 @@
 
 body {
   font-family: "Kanit", sans-serif;
+  background: rgb(21, 193, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(21, 193, 255, 1) 0%,
+    rgba(44, 218, 254, 1) 4%,
+    rgba(100, 226, 252, 1) 10%,
+    rgba(220, 249, 255, 1) 25%,
+    rgba(255, 255, 255, 1) 63%
+  );
 }

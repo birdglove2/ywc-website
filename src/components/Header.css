@@ -1,22 +1,26 @@
+body {
+  min-width: 480px;
+}
 .gridHeader {
   display: grid;
-  grid-template-rows: 1.1fr 1fr 1.7fr;
+  grid-template-rows: 1fr 1fr 1.7fr;
   /* grid-template-areas: "leftBody rightBody"; */
   /* column-gap: 3vw; */
   /* padding: 1vw; */
 }
 
 .searchBar {
-  width: 100%;
+  /* min-width: 480px; */
   height: 5vh;
   background-color: white;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   padding: 10px;
 }
 
 .header {
-  width: 100%;
+  /* min-width: 480px; */
   height: 5vh;
   background-color: rgb(34, 34, 143);
   color: white;
@@ -34,13 +38,13 @@
 }
 
 .logoImg {
-  margin-top: 0.3vw;
-  margin-left: 1vw;
-  width: 2vw;
-  height: 4vh;
+  content: url("./icon/klklogodesktop.png");
+  width: 120px;
+  height: 45px;
+  margin-right: 1vw;
 }
 
-form.example input[type="text"] {
+/* form.example input[type="text"] {
   padding: 10px;
   font-size: 17px;
   border: 1px solid grey;
@@ -60,4 +64,83 @@ form.example button {
   border: 1px solid grey;
   border-left: none;
   cursor: pointer;
+} */
+/* 
+.filterButton {
+  display: none;
+} */
+
+@media (max-width: 480px) {
+  .hardCodedText2 {
+    margin-left: 5vw;
+    font-size: 2vh;
+  }
+
+  .logoImg {
+    content: url("./icon/klklogomobile.png");
+    width: 90px;
+    height: 55px;
+  }
+
+  .searchBar {
+    width: 95%;
+    height: 1vh;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 10px 10px 10px;
+    margin-bottom: 10px;
+  }
+
+  .filterButton {
+    margin-left: 10px;
+    background-color: Transparent;
+    border: none;
+  }
+}
+
+.search {
+  width: 80%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 1.8px solid rgb(207, 206, 206);
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  color: #dfdfdf;
+  font-family: "Kanit", sans-serif;
+}
+
+.searchTerm:focus {
+  color: rgb(71, 71, 71);
+}
+
+.searchButton {
+  width: 70px;
+  height: 34px;
+  border: 1.8px solid rgb(207, 206, 206);
+  border-left: none;
+  background: rgb(236, 235, 235);
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
