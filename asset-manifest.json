@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ywc-website/static/css/main.d2df579e.chunk.css",
-    "main.js": "/ywc-website/static/js/main.82cac5a1.chunk.js",
-    "main.js.map": "/ywc-website/static/js/main.82cac5a1.chunk.js.map",
+    "main.js": "/ywc-website/static/js/main.ce5479c4.chunk.js",
+    "main.js.map": "/ywc-website/static/js/main.ce5479c4.chunk.js.map",
     "runtime-main.js": "/ywc-website/static/js/runtime-main.e726b737.js",
     "runtime-main.js.map": "/ywc-website/static/js/runtime-main.e726b737.js.map",
     "static/js/2.70a335cc.chunk.js": "/ywc-website/static/js/2.70a335cc.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.e726b737.js",
     "static/js/2.70a335cc.chunk.js",
     "static/css/main.d2df579e.chunk.css",
-    "static/js/main.82cac5a1.chunk.js"
+    "static/js/main.ce5479c4.chunk.js"
   ]
 }
