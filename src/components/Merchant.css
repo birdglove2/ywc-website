@@ -1,7 +1,3 @@
-/* .rowMerchant {
-  grid-auto-columns: 1fr 3fr;
-} */
-
 .merchantBox {
   width: auto;
   height: 30vh;
@@ -99,7 +95,6 @@
 
 .merchantTextbox {
   margin-left: 20px;
-  /* background-color: rgb(239, 239, 241);*/
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -132,11 +127,7 @@
   margin-top: 1.7vh;
 }
 
-@media (max-width: 480px) {
-  body {
-    /* background-color: black; */
-  }
-
+@media screen and (max-width: 480px) {
   .merchantBox {
     width: auto;
     height: auto;
@@ -150,14 +141,13 @@
 
   .merchantImg {
     width: 100%;
-    margin-top: 0px;
     height: 40vh;
     border-radius: 4px;
   }
 
   .merchantImgClosed {
     min-width: 100%;
-    height: 35vh;
+    height: 40vh;
     border-radius: 4px;
     opacity: 60%;
   }

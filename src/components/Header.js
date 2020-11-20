@@ -1,22 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./Header.css";
+import { webData } from "../data";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
+import filter from "./icon/filter.png";
+import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { UserContext } from "../UserContext";
 
 function Header() {
-  const [searchInput, setSearchInput] = useState();
+  const provinces = webData.provinces;
+  const [categoryNow, setCategoryNow] = useState(webData.categories[0]);
+  const { state, setState } = useContext(UserContext);
 
-  const inputHandler = e => {
-    setSearchInput(e.target.value);
+  let provinceBody = provinces.map(province => {
+    return <option>{province}</option>;
+  });
+
+  const onSubmitHandler = e => {
+    e.preventDefault();
+    e.target.reset();
   };
 
-  const searchHandler = e => {
-    e.preventDefault();
-  };
-
-  const filterHandler = e => {
-    e.preventDefault();
+  const provinceChangeHandler = e => {
+    setState({ ...state, provinceSelected: e.target.value });
   };
 
   return (
@@ -25,29 +32,53 @@ function Header() {
         <div>
           <img className="logoImg"></img>
         </div>
+        <div>
+          <div className="mapIconHead">
+            <FontAwesomeIcon style={{ color: "black" }} icon={faMapMarkerAlt} />
+          </div>
 
-        <form className="search" onSubmit={searchHandler}>
+          <select
+            className="provinceSelectorHeader"
+            onChange={provinceChangeHandler}
+          >
+            <option value="0">พื้นที่ใกล้ฉัน</option>
+            {provinceBody}
+          </select>
+        </div>
+        <form className="search" onSubmit={onSubmitHandler}>
           <input
             type="text"
             className="searchTerm"
             placeholder="ค้นหา ชื่อ ร้านอาหาร และเครื่องดื่ม ร้านธงฟ้า ร้านค้า OTOP และสินค้าทั่วไป"
-            onChange={inputHandler}
+            onChange={e => setState({ ...state, search: e.target.value })}
           ></input>
           <button className="searchButton" type="submit">
             {" "}
             <FontAwesomeIcon style={{ color: "gray" }} icon={faSearch} />
           </button>
         </form>
-        <button onClick={filterHandler} className="filterButton">
-          <FontAwesomeIcon
-            style={{ width: "23px", height: "23px", color: "darkblue" }}
-            icon={faFilter}
-          />
+
+        <button
+          onClick={() => setState({ ...state, modalIsOpen: true })}
+          className="filterButton"
+        >
+          <img className="filterIcon" src={filter}></img>
         </button>
       </div>
 
       <div className="header">
-        <h4 className="hardCodedText1">หน้าแรก / ค้นหา</h4>
+        <div className="homeAndSearch">
+          <a
+            href={"https://birdglove2.github.io/ywc-website/"}
+            className="hardCodedText1"
+          >
+            หน้าแรก
+          </a>
+          <div>/</div>
+          <div>
+            <b>ค้นหา</b>
+          </div>
+        </div>
       </div>
 
       <div>

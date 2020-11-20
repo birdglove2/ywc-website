@@ -21,6 +21,7 @@ body {
   height: auto;
   padding: 1vw;
 }
+
 .textHeadLeft {
   font-size: 2vmin;
   font-weight: 1000;
@@ -33,6 +34,57 @@ body {
   padding: 7px;
   margin-top: 20px;
 }
+
+.provinceBody {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 10px;
+  margin-top: 40px;
+  margin-left: 10px;
+}
+
+.provinceSelector {
+  font-family: "Kanit", sans-serif;
+  width: 100%;
+  height: 4vh;
+  border: 1px solid rgb(220, 220, 220);
+  padding-left: 30px;
+  background: rgb(247, 247, 247);
+  color: rgb(70, 70, 70);
+}
+.subcateSelector {
+  font-family: "Kanit", sans-serif;
+  width: 100%;
+  height: 4vh;
+  color: rgb(170, 170, 170);
+  background: rgb(247, 247, 247);
+
+  border: 1px solid rgb(220, 220, 220);
+  padding-left: 10px;
+}
+
+.modalCloseButtonContainer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalCloseButton {
+  text-align: center;
+  width: 300px;
+  height: 20px;
+  color: rgb(78, 78, 78);
+  background: rgb(245, 245, 245);
+  border: 1px solid rgb(184, 183, 183);
+  border-width: 0.1px;
+  border-radius: 2px;
+  font-family: "Kanit", sans-serif;
+  font-size: 10px;
+}
+
 .rightBody {
   grid-area: rightBody;
   border: none;
@@ -40,11 +92,11 @@ body {
   height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .ordinaryText {
-  font-size: 1.7vmin;
+  font-size: 1.5vmin;
   color: rgb(78, 78, 78);
 }
 
@@ -71,21 +123,7 @@ input[type="radio"] {
   font-family: "Kanit", sans-serif;
 }
 
-@media (max-width: 480px) {
-  /* .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "rightBody";
-    column-gap: 0vw;
-    padding: 1vw;
-  } */
-  /* .grid{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-  } */
-
+@media screen and (max-width: 480px) {
   .grid {
     width: auto;
     display: flex;
@@ -104,7 +142,7 @@ input[type="radio"] {
     grid-area: rightBody;
     border: none;
     min-width: 480px;
-    height: auto;
+    min-height: 1000px;
     padding: 10px;
   }
 }

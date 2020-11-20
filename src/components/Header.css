@@ -4,14 +4,29 @@ body {
 .gridHeader {
   display: grid;
   grid-template-rows: 1fr 1fr 1.7fr;
-  /* grid-template-areas: "leftBody rightBody"; */
-  /* column-gap: 3vw; */
-  /* padding: 1vw; */
+}
+
+.mapIconHead {
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 15px;
+  z-index: 10;
+}
+
+.provinceSelectorHeader {
+  font-family: "Kanit", sans-serif;
+  width: 170px;
+  height: 34px;
+  border: 1.8px solid rgb(207, 206, 206);
+  background: rgb(247, 247, 247);
+  border-right: none;
+  padding-left: 30px;
+  border-radius: 8px 0 0 8px;
+  color: rgb(70, 70, 70);
 }
 
 .searchBar {
-  /* min-width: 480px; */
-  height: 5vh;
+  height: 4vh;
   background-color: white;
   display: flex;
   flex-direction: row;
@@ -20,9 +35,8 @@ body {
 }
 
 .header {
-  /* min-width: 480px; */
   height: 5vh;
-  background-color: rgb(34, 34, 143);
+  background-color: rgb(30, 60, 120);
   color: white;
   padding: 5px;
   display: flex;
@@ -30,8 +44,17 @@ body {
   align-items: center;
 }
 
-.hardCodedText1 {
+.homeAndSearch {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 10px;
   margin-left: 5vw;
+}
+
+.hardCodedText1 {
+  color: white;
+  text-decoration: underline;
 }
 .hardCodedText2 {
   margin-left: 1.5vw;
@@ -44,65 +67,8 @@ body {
   margin-right: 1vw;
 }
 
-/* form.example input[type="text"] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 100%;
-  background: #f1f1f1;
-}
-
-form.example button {
-  margin-top: 0px;
-  float: right;
-  width: 20%;
-  padding: 10px;
-  background: #2196f3;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none;
-  cursor: pointer;
-} */
-/* 
-.filterButton {
-  display: none;
-} */
-
-@media (max-width: 480px) {
-  .hardCodedText2 {
-    margin-left: 5vw;
-    font-size: 2vh;
-  }
-
-  .logoImg {
-    content: url("./icon/klklogomobile.png");
-    width: 90px;
-    height: 55px;
-  }
-
-  .searchBar {
-    width: 95%;
-    height: 1vh;
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 30px 10px 10px 10px;
-    margin-bottom: 10px;
-  }
-
-  .filterButton {
-    margin-left: 10px;
-    background-color: Transparent;
-    border: none;
-  }
-}
-
 .search {
-  width: 80%;
+  width: 60%;
   position: relative;
   display: flex;
 }
@@ -113,7 +79,7 @@ form.example button {
   border-right: none;
   padding: 5px;
   height: 20px;
-  border-radius: 8px 0 0 8px;
+  border-radius: 0x 0 0 8px;
   outline: none;
   color: #dfdfdf;
   font-family: "Kanit", sans-serif;
@@ -133,14 +99,61 @@ form.example button {
   color: #fff;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 13px;
 }
 
-/*Resize the wrap to see the search bar change!*/
-.wrap {
-  width: 30%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+@media (max-width: 480px) {
+  .mapIconHead {
+    display: none;
+  }
+
+  .provinceSelectorHeader {
+    display: none;
+  }
+
+  .hardCodedText2 {
+    margin-left: 5vw;
+    font-size: 2vh;
+  }
+
+  .logoImg {
+    content: url("./icon/klklogomobile.png");
+    width: 90px;
+    height: 55px;
+  }
+
+  .search {
+    width: 70%;
+    position: relative;
+    display: flex;
+  }
+
+  .searchBar {
+    min-width: 480px;
+    height: 1vh;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 10px 10px 10px;
+    margin-bottom: 10px;
+  }
+
+  .filterButton {
+    margin-left: 10px;
+    background-color: Transparent;
+    border: none;
+  }
+
+  .filterIcon {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .filterButton {
+    display: none;
+  }
 }

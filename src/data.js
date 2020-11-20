@@ -221,6 +221,49 @@ export const webData = {
       recommendedItems: ["หมูกระทะ", "สุกี้"],
       addressProvinceName: "กรุงเทพมหานคร",
       addressDistrictName: "เขตธนบุรี"
+    },
+    // เพิ่มเอง
+    {
+      shopNameTH: "Cafe On Truck by Bird",
+      categoryName: "งานบริการอื่นๆ / เบ็ดเตล็ด",
+      subcategoryName: "สินค้า และ บริการ เกี่ยวกับการตกแต่งบ้าน",
+      coverImageId:
+        "https://images.unsplash.com/photo-1500338427510-5deb175987d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1954&q=80",
+      facilities: ["ที่จอดรถ", "บริการส่ง"],
+      priceLevel: 1,
+      isOpen: "Y",
+      highlightText: "<strong>ร้านทุกอย่าง</strong> โต๊ะ ตู้ เตียง",
+      recommendedItems: ["แจกัน", "จานชาม", "เก้าอี้สามขา"],
+      addressProvinceName: "กรุงเทพมหานคร",
+      addressDistrictName: "เขตธนบุรี"
+    },
+    {
+      shopNameTH: "Cafe Green by Bird",
+      categoryName: "งานบริการอื่นๆ / เบ็ดเตล็ด",
+      subcategoryName: "สินค้า และ บริการ เกี่ยวกับการตกแต่งบ้าน",
+      coverImageId:
+        "https://images.unsplash.com/photo-1516097392878-c2b79448e1ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80",
+      facilities: ["ที่จอดรถ"],
+      priceLevel: 3,
+      isOpen: "N",
+      highlightText: "<strong>ร้านทุกอย่าง</strong> โต๊ะ ตู้ เตียง",
+      recommendedItems: ["แจกัน", "จานชาม", "เก้าอี้สามขา"],
+      addressProvinceName: "กรุงเทพมหานคร",
+      addressDistrictName: "เขตธนบุรี"
+    },
+    {
+      shopNameTH: "Bird Bar ",
+      categoryName: "งานบริการอื่นๆ / เบ็ดเตล็ด",
+      subcategoryName: "สินค้า และ บริการ เกี่ยวกับการตกแต่งบ้าน",
+      coverImageId:
+        "https://images.unsplash.com/photo-1577398580707-dfca944bab58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80",
+      facilities: ["ที่จอดรถ", "บริการส่ง", "รับจองล่วงหน้า"],
+      priceLevel: 4,
+      isOpen: "Y",
+      highlightText: "<strong>ร้านทุกอย่าง</strong> โต๊ะ ตู้ เตียง",
+      recommendedItems: ["แจกัน", "จานชาม", "เก้าอี้สามขา"],
+      addressProvinceName: "กรุงเทพมหานคร",
+      addressDistrictName: "เขตธนบุรี"
     }
   ]
 };

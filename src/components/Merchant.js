@@ -7,7 +7,6 @@ import reserve from "./icon/reserve.png";
 import pet from "./icon/pet.png";
 
 function Merchant(props) {
-  // console.log("props", props);
   const coverImageId = props.merchant.coverImageId;
   const shopNameTH = props.merchant.shopNameTH;
   const isOpen = props.merchant.isOpen;
@@ -19,10 +18,6 @@ function Merchant(props) {
   const recommendedItems = props.merchant.recommendedItems;
   const addressProvinceName = props.merchant.addressProvinceName;
   const addressDistrictName = props.merchant.addressDistrictName;
-
-  const [isOpenM, setisOpenM] = useState();
-
-  const [priceLevelMerchant, setPriceLevelMerchant] = useState(0);
 
   let openCloseSticker;
   if (isOpen === "Y") {
@@ -49,6 +44,8 @@ function Merchant(props) {
       facilitiesM.push(<img className="iconImg" src={pet}></img>);
     } else if (facilities[i] === "รับจองล่วงหน้า") {
       facilitiesM.push(<img className="iconImg" src={reserve}></img>);
+    } else if (facilities[i] === "บริการส่ง") {
+      facilitiesM.push(<img className="iconImg" src={motorcycle}></img>);
     }
   }
 
@@ -58,9 +55,12 @@ function Merchant(props) {
       return <span>{(index ? ", " : "") + item}</span>;
     });
 
+    let cleanHighlightText = highlightText.replace("<strong>", "");
+    let cleanHighlightText2 = cleanHighlightText.replace("</strong>", "");
+
     additionalInfo = (
       <div>
-        <div>{highlightText}</div>
+        <div>{cleanHighlightText2}</div>
         <div>
           <b className="boldmenu">เมนูแนะนำ: </b> {recItem}
         </div>
@@ -92,8 +92,9 @@ function Merchant(props) {
         </div>
 
         <div className="secondTitleContainer">
-          {subcategoryName} | {levelOfPrice} | {addressDistrictName}{" "}
-          {addressProvinceName}
+          {subcategoryName} &nbsp; &nbsp; | &nbsp; &nbsp;
+          {levelOfPrice} &nbsp; &nbsp; | &nbsp; &nbsp;
+          {addressDistrictName} {addressProvinceName}
         </div>
         <div className="keedkeed">
           -----------------------------------------------------------------------------------------------------------------------------------------------
