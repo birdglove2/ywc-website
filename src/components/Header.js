@@ -9,11 +9,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { UserContext } from "../UserContext";
 
 function Header() {
-  // const provinces = webData.provinces;
+  const provinces = webData.provinces;
   const [categoryNow, setCategoryNow] = useState(webData.categories[0]);
   const { state, setState } = useContext(UserContext);
 
-  let provinceBody = state.provinces.map(province => {
+  let provinceBody = provinces.map(province => {
     return <option>{province}</option>;
   });
 

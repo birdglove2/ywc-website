@@ -10,7 +10,7 @@ import Modal from "react-modal";
 function Body() {
   // from JSON
   const categories = webData.categories;
-  // const provinces = webData.provinces;
+  const provinces = webData.provinces;
   const priceRange = webData.priceRange;
   const merchants = webData.merchants;
 
@@ -189,7 +189,7 @@ function Body() {
     </div>
   );
 
-  let provinceBody = state.provinces.map(province => {
+  let provinceBody = provinces.map(province => {
     return <option>{province}</option>;
   });
 
