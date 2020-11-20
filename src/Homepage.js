@@ -5,6 +5,7 @@ import Body from "./components/Body";
 import { UserContext } from "./UserContext";
 
 function Homepage() {
+  const provinces = webData.provinces;
   const [state, setState] = useState({
     search: "",
     provinceSelected: "0",

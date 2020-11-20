@@ -9,11 +9,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { UserContext } from "../UserContext";
 
 function Header() {
-  const provinces = webData.provinces;
+  // const provinces = webData.provinces;
   const [categoryNow, setCategoryNow] = useState(webData.categories[0]);
   const { state, setState } = useContext(UserContext);
 
-  let provinceBody = provinces.map(province => {
+  let provinceBody = state.provinces.map(province => {
     return <option>{province}</option>;
   });
 
@@ -73,8 +73,10 @@ function Header() {
             className="hardCodedText1"
           >
             หน้าแรก
-          </a>
+          </a>{" "}
+          &nbsp;
           <div>/</div>
+          &nbsp;
           <div>
             <b>ค้นหา</b>
           </div>

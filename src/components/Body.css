@@ -61,7 +61,6 @@ body {
   height: 4vh;
   color: rgb(170, 170, 170);
   background: rgb(247, 247, 247);
-
   border: 1px solid rgb(220, 220, 220);
   padding-left: 10px;
 }
@@ -136,6 +135,20 @@ input[type="radio"] {
 
   .leftBody {
     display: none;
+  }
+
+  .provinceBody {
+    display: none;
+  }
+
+  .provinceSelector {
+    font-family: "Kanit", sans-serif;
+    width: 100%;
+    height: 4vh;
+    border: 1px solid rgb(220, 220, 220);
+    padding-left: 10px;
+    background: rgb(247, 247, 247);
+    color: rgb(170, 170, 170);
   }
 
   .rightBody {
